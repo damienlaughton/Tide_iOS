@@ -9,44 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/UICustomLabel.swift"
-            timestampString = "518171828.67408"
+            filePath = "BarFinder/BarFinder/BarListViewController.swift"
+            timestampString = "518173656.419198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "configureAttributedText()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/UICustomLabel.swift"
-            timestampString = "518171805.985443"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "prepareForInterfaceBuilder()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/UICustomLabel.swift"
-            timestampString = "518171817.629383"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,12 +25,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/BarListViewController.swift"
-            timestampString = "518173656.419198"
+            filePath = "BarFinder/BarFinder/UICustomLabel.swift"
+            timestampString = "518179444.161178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>

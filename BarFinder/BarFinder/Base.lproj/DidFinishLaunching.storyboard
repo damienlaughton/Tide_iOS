@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Near me" id="Pf3-4u-062"/>
+                    <tabBarItem key="tabBarItem" title="Near me" image="distance_icon" selectedImage="distance_icon" id="Pf3-4u-062"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci2-nh-KCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,8 +41,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFY-9n-nSC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAR FINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-YM-Jdl" customClass="UIBarListTitlelabel" customModule="BarFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21.5" width="375" height="22.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WEV-YM-Jdl" secondAttribute="bottom" id="a2m-dH-RPW"/>
+                                    <constraint firstItem="WEV-YM-Jdl" firstAttribute="leading" secondItem="DFY-9n-nSC" secondAttribute="leading" id="p03-Vj-nXn"/>
+                                    <constraint firstAttribute="trailing" secondItem="WEV-YM-Jdl" secondAttribute="trailing" id="u6q-4K-fpM"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tUn-ro-TGU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="w1w-KY-wEh" id="7pA-D4-YIE"/>
@@ -51,13 +69,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tUn-ro-TGU" firstAttribute="top" secondItem="3Ae-k8-wpR" secondAttribute="top" id="5wy-BD-02V"/>
+                            <constraint firstItem="tUn-ro-TGU" firstAttribute="top" secondItem="DFY-9n-nSC" secondAttribute="bottom" id="6sZ-QC-7U8"/>
                             <constraint firstItem="tUn-ro-TGU" firstAttribute="leading" secondItem="3Ae-k8-wpR" secondAttribute="leading" id="JG0-HU-xhF"/>
+                            <constraint firstItem="DFY-9n-nSC" firstAttribute="height" secondItem="3Ae-k8-wpR" secondAttribute="height" multiplier="0.0659" id="Q9S-t6-JI3"/>
                             <constraint firstAttribute="trailing" secondItem="tUn-ro-TGU" secondAttribute="trailing" id="Zx2-MS-gxM"/>
                             <constraint firstItem="DVj-eG-JNN" firstAttribute="top" secondItem="tUn-ro-TGU" secondAttribute="bottom" id="goB-zW-vTS"/>
+                            <constraint firstAttribute="trailing" secondItem="DFY-9n-nSC" secondAttribute="trailing" id="rKG-aV-AZO"/>
+                            <constraint firstItem="DFY-9n-nSC" firstAttribute="top" secondItem="3Ae-k8-wpR" secondAttribute="top" id="tmg-Od-1MT"/>
+                            <constraint firstItem="DFY-9n-nSC" firstAttribute="leading" secondItem="3Ae-k8-wpR" secondAttribute="leading" id="vYB-Gk-NtH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bar List" id="87k-Hm-OPd"/>
+                    <tabBarItem key="tabBarItem" title="Bar List" image="glass_icon" selectedImage="glass_icon" id="87k-Hm-OPd"/>
                     <connections>
                         <outlet property="tableView" destination="tUn-ro-TGU" id="Ixa-AO-pK2"/>
                     </connections>
@@ -85,4 +107,8 @@
             <point key="canvasLocation" x="284" y="47"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="distance_icon" width="22" height="22"/>
+        <image name="glass_icon" width="22" height="22"/>
+    </resources>
 </document>

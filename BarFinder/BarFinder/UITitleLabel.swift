@@ -11,5 +11,6 @@ import UIKit
 @IBDesignable class UITitleLabel: UICustomLabel {
   
   override var pointSize: CGFloat { return 18.0 }
-  override var fontTracking: CGFloat { return 0.0 }
+  override var fontTracking: CGFloat { return 100.0 }
+  
 }

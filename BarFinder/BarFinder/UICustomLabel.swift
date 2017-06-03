@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class UICustomLabel: UILabel {
   
-  var fontName: String { return "Didcot" }
+  var fontName: String { return "Didot" }
   var pointSize: CGFloat { return 13.0 }
   
   // Overide tracking to effect the kerning
@@ -35,33 +35,34 @@ import UIKit
     return _attributtedFont
   }
   
+  override func draw(_ rect: CGRect) {
+    configure()
+    super.drawText(in: rect)
+  }
+  
   override public var text: String? {
     didSet {
-      self.configureAttributedText()
+      self.configure()
     }
   }
   
-  
-  @IBInspectable var color : UIColor = UIColor.black {
+  @IBInspectable var color : UIColor? = .none {
     didSet {
-      self.configureAttributedText()
+      self.configure()
     }
   }
   
   public required init?(coder aDecoder: NSCoder) {
     
     super.init(coder: aDecoder)
-    configure()
   }
   
   override public init(frame: CGRect) {
     
     super.init(frame: frame)
-    configure()
   }
   
   override func prepareForInterfaceBuilder() {
-    configure()
     super.prepareForInterfaceBuilder()
   }
   
@@ -80,7 +81,7 @@ import UIKit
   func configureAttributedText () {
     let text = self.text ?? ""
     
-    let attributedText =  NSAttributedString(string: text, attributes: [NSKernAttributeName:self.kerningValue, NSFontAttributeName:self.attributedFont, NSForegroundColorAttributeName:self.color])
+    let attributedText =  NSAttributedString(string: text, attributes: [NSKernAttributeName:self.kerningValue, NSFontAttributeName:self.attributedFont, NSForegroundColorAttributeName:textColor])
     
     self.attributedText = attributedText
   }
