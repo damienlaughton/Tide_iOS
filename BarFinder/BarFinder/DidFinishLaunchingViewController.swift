@@ -16,6 +16,10 @@ import UIKit
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
     self.performLaunchAnimation(completionHandler: { _ in
       self.launchTabBarController()
@@ -59,8 +63,10 @@ import UIKit
   
     guard let titleCenterXConstraint = self.titleCenterXConstraint else { return }
     guard let titleImageView = self.titleImageView else { return }
+    
+    self.view.layoutIfNeeded()
   
-    titleCenterXConstraint.constant = -1.0 * titleImageView.frame.size.width
+    titleCenterXConstraint.constant = -1.0 * titleImageView.bounds.size.width
     
     if (!animated) {
       self.view.layoutIfNeeded()
