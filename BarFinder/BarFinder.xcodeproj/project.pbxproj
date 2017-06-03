@@ -25,6 +25,8 @@
 		6D39A1021EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39A1011EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift */; };
 		6D39A1051EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39A1041EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift */; };
 		6D39A1071EE2DDFA00E2E2B2 /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39A1061EE2DDFA00E2E2B2 /* GlobalDefinitions.swift */; };
+		6D39A10B1EE2F57B00E2E2B2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6D39A10A1EE2F57B00E2E2B2 /* Podfile */; };
+		855CE8FBBE5E96C5B3E46AC6 /* libPods-BarFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CBEFCC0C482288396FD79A /* libPods-BarFinder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,10 @@
 		6D39A1011EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarListTitlelabel.swift; sourceTree = "<group>"; };
 		6D39A1041EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarFinderTabBarController.swift; sourceTree = "<group>"; };
 		6D39A1061EE2DDFA00E2E2B2 /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
+		6D39A10A1EE2F57B00E2E2B2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		A0BE17D5D3C302E815C86AB0 /* Pods-BarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarFinder.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder.release.xcconfig"; sourceTree = "<group>"; };
+		A4AB7758111EE3C5E54D3174 /* Pods-BarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarFinder.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CBEFCC0C482288396FD79A /* libPods-BarFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BarFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855CE8FBBE5E96C5B3E46AC6 /* libPods-BarFinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4B4B7F31DDA006399487AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7CBEFCC0C482288396FD79A /* libPods-BarFinder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D25E9A71EE2905B00F09ECE = {
 			isa = PBXGroup;
 			children = (
+				6D39A10A1EE2F57B00E2E2B2 /* Podfile */,
 				6D25E9B21EE2905B00F09ECE /* BarFinder */,
 				6D25E9B11EE2905B00F09ECE /* Products */,
+				7E8DC3F9070D6FDAAB80E824 /* Pods */,
+				0C4B4B7F31DDA006399487AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +193,15 @@
 			name = UIBarFinderTabBarController;
 			sourceTree = "<group>";
 		};
+		7E8DC3F9070D6FDAAB80E824 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB7758111EE3C5E54D3174 /* Pods-BarFinder.debug.xcconfig */,
+				A0BE17D5D3C302E815C86AB0 /* Pods-BarFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D25E9C21EE2905B00F09ECE /* Build configuration list for PBXNativeTarget "BarFinder" */;
 			buildPhases = (
+				1F0CA4F2B89CC50A1B5677B1 /* [CP] Check Pods Manifest.lock */,
 				6D25E9AC1EE2905B00F09ECE /* Sources */,
 				6D25E9AD1EE2905B00F09ECE /* Frameworks */,
 				6D25E9AE1EE2905B00F09ECE /* Resources */,
+				E7B30F6AE87E2A8D965C5268 /* [CP] Embed Pods Frameworks */,
+				77B2D629D4DCAB4FBB1264D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D39A10B1EE2F57B00E2E2B2 /* Podfile in Resources */,
 				6D25E9BE1EE2905B00F09ECE /* LaunchScreen.storyboard in Resources */,
 				6D25E9DB1EE2A7F800F09ECE /* UIBarListTableViewCell.xib in Resources */,
 				6D25E9BB1EE2905B00F09ECE /* Assets.xcassets in Resources */,
@@ -243,6 +274,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F0CA4F2B89CC50A1B5677B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77B2D629D4DCAB4FBB1264D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B30F6AE87E2A8D965C5268 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D25E9AC1EE2905B00F09ECE /* Sources */ = {
@@ -385,6 +464,7 @@
 		};
 		6D25E9C31EE2905B00F09ECE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4AB7758111EE3C5E54D3174 /* Pods-BarFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YHNPFJ55PW;
@@ -398,6 +478,7 @@
 		};
 		6D25E9C41EE2905B00F09ECE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0BE17D5D3C302E815C86AB0 /* Pods-BarFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YHNPFJ55PW;
