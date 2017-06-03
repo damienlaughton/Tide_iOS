@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1236" y="-280.20989505247377"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Bar Finder Tab Bar Controller-->
         <scene sceneID="E88-Fk-vQd">
             <objects>
-                <tabBarController id="uKx-4B-Tf4" sceneMemberID="viewController">
+                <tabBarController id="uKx-4B-Tf4" customClass="UIBarFinderTabBarController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="7RR-m6-NTh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
