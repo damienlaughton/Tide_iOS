@@ -10,6 +10,6 @@ import UIKit
 
 @IBDesignable class UIBarListTitlelabel: UITitleLabel {
   
-  override var overrideColor: UIColor? { return UIColor.barLabelFontColor() }
+  override var overrideColor: UIColor? { return UIColor.barTitleFontColor() }
   
 }

@@ -39,6 +39,8 @@ import UIKit
   
   }
   
+//  MARK:- Animation(s)
+  
   func removeLogo(animated: Bool = true, completionHandler: @escaping AnimationCompletionHandler = { _ in }) {
     
     guard let logoImageView = self.logoImageView else { return }

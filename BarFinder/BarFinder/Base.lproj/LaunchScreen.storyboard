@@ -48,7 +48,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0DB-Z5-8pX" firstAttribute="width" secondItem="nab-cb-miC" secondAttribute="width" multiplier="0.64" id="0o0-2m-VIl"/>
                             <constraint firstItem="73Z-fL-Ks2" firstAttribute="leading" secondItem="nab-cb-miC" secondAttribute="leading" id="CNN-Z4-qJv"/>

@@ -20,7 +20,7 @@ import UIKit
   }
   
   func configure() {
-    self.tabBar.tintColor =  UIColor.barLabelFontColor()
+    self.tabBar.tintColor =  UIColor.tabBarTint()
   }
   
   override func prepareForInterfaceBuilder() {

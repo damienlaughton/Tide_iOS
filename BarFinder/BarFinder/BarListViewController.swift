@@ -14,12 +14,14 @@ import UIKit
 
   var bars: [Bar] = []
   
-  internal let mockBars = [Bar(barName: "Joe's", distance: "250m", lat: 0, lon: 0), Bar(barName: "Mary's", distance: "350m", lat: 0, lon: 0)]
+  internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
   
   internal let cellIdentifier = String(describing: UIBarListTableViewCell.self)
   
   override func configure() {
     super.configure()
+    
+    self.tableView?.backgroundColor = UIColor.barViewBackground()
     
     self.tableView?.register(UINib(nibName: self.cellIdentifier, bundle: nil), forCellReuseIdentifier: self.cellIdentifier)
   }

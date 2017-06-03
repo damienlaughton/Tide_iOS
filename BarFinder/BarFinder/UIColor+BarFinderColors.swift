@@ -10,11 +10,19 @@ import UIKit
 
 extension UIColor {
   class func barLabelFontColor() -> UIColor {
+    return charcoal_grey()
+  }
+  
+  class func barTitleFontColor() -> UIColor {
     return thunderbird()
   }
 
   class func barViewBackground() -> UIColor {
-    return UIColor.charcoal_grey()
+    return hunter_green()
+  }
+  
+  class func tabBarTint() -> UIColor {
+    return thunderbird()
   }
   
   private class func charcoal_grey() -> UIColor {
@@ -25,4 +33,7 @@ extension UIColor {
     return UIColor(red:0.75, green:0.20, blue:0.08, alpha:1.00)
   }
 
+  private class func hunter_green() -> UIColor {
+    return UIColor(red:0.09, green:0.09, blue:0.09, alpha:1.00)
+  }
 }
