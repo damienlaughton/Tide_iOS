@@ -20,4 +20,4 @@ It is required to submit a zip file via email or a link to a public repository c
 
 # Things in the code to look for
 
-IBINspectable / IBDesignable, constraints, singletons, URLSession, custom labels (tracking - it's a beautiful thing)
+IBINspectable / IBDesignable, constraints and constraint animation, blocks, blocks with default value parameters, singletons, URLSession, custom labels (tracking - it's a beautiful thing)
