@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uKx-4B-Tf4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IGm-5E-BWK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +48,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAR FINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-YM-Jdl" customClass="UIBarListTitlelabel" customModule="BarFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="21.5" width="375" height="22.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -88,6 +90,40 @@
             </objects>
             <point key="canvasLocation" x="1236" y="-280.20989505247377"/>
         </scene>
+        <!--Did Finish Launching View Controller-->
+        <scene sceneID="Ob6-00-Gbl">
+            <objects>
+                <viewController storyboardIdentifier="DidFinishLaunchingViewController" id="IGm-5E-BWK" customClass="DidFinishLaunchingViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="she-2V-dNV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Izo-GO-e1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AgD-lH-WFl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glass" translatesAutoresizingMaskIntoConstraints="NO" id="6ku-Gg-eoR">
+                                <rect key="frame" x="67" y="333.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6ku-Gg-eoR" secondAttribute="height" multiplier="1:1" id="bok-iH-dxl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6ku-Gg-eoR" firstAttribute="top" secondItem="AgD-lH-WFl" secondAttribute="centerY" id="1iz-iX-5xI"/>
+                            <constraint firstItem="6ku-Gg-eoR" firstAttribute="width" secondItem="AgD-lH-WFl" secondAttribute="width" multiplier="0.64" id="Cjh-X1-da7"/>
+                            <constraint firstItem="6ku-Gg-eoR" firstAttribute="centerX" secondItem="AgD-lH-WFl" secondAttribute="centerX" id="bcs-WM-UdX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="uKx-4B-Tf4" kind="show" identifier="DidFinishLaunchingSegueTabBarController" id="wNg-Lj-EUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIN-p2-W4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="52"/>
+        </scene>
         <!--Bar Finder Tab Bar Controller-->
         <scene sceneID="E88-Fk-vQd">
             <objects>
@@ -109,6 +145,7 @@
     </scenes>
     <resources>
         <image name="distance_icon" width="22" height="22"/>
+        <image name="glass" width="240" height="240"/>
         <image name="glass_icon" width="22" height="22"/>
     </resources>
 </document>
