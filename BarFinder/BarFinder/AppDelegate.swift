@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  private let GOOGLE_API_KEY = "AIzaSyB6AvJCuawPc99PY9CfC6nKVc84IkZ_PhE"
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-//    UITabBar.appearance().tintColor = UIColor.barLabelFontColor()
+    GMSPlacesClient.provideAPIKey(GOOGLE_API_KEY)
+    GMSServices.provideAPIKey(GOOGLE_API_KEY)
 
     return true
   }

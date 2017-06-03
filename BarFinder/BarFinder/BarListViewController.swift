@@ -12,9 +12,9 @@ import UIKit
 
   @IBOutlet weak var tableView: UITableView?
 
-  internal var bars: [Bar] = []
+  var bars: [Bar] = []
   
-  internal let mockBars = [Bar(barName: "Joe's", distance: "250m"), Bar(barName: "Mary's", distance: "350m")]
+  internal let mockBars = [Bar(barName: "Joe's", distance: "250m", lat: 0, lon: 0), Bar(barName: "Mary's", distance: "350m", lat: 0, lon: 0)]
   
   internal let cellIdentifier = String(describing: UIBarListTableViewCell.self)
   

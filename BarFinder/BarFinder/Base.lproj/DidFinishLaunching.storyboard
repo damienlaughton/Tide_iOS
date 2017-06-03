@@ -15,7 +15,7 @@
         <!--Near me-->
         <scene sceneID="Jvp-Dk-BnJ">
             <objects>
-                <viewController id="mj7-sI-FkC" sceneMemberID="viewController">
+                <viewController id="mj7-sI-FkC" customClass="NearMeViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nr3-j6-sng"/>
                         <viewControllerLayoutGuide type="bottom" id="W2U-Me-vn7"/>
@@ -23,13 +23,28 @@
                     <view key="view" contentMode="scaleToFill" id="l6M-cA-btH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSK-Vb-xoN" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oSK-Vb-xoN" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" id="7O9-HO-89g"/>
+                            <constraint firstItem="oSK-Vb-xoN" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="MaQ-4U-IZD"/>
+                            <constraint firstAttribute="trailing" secondItem="oSK-Vb-xoN" secondAttribute="trailing" id="W05-X2-YNG"/>
+                            <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="oSK-Vb-xoN" secondAttribute="bottom" id="vu0-Sj-xEW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Near me" image="distance_icon" selectedImage="distance_icon" id="Pf3-4u-062"/>
+                    <connections>
+                        <outlet property="mapView" destination="oSK-Vb-xoN" id="YVU-Fo-5wq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci2-nh-KCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="375"/>
+            <point key="canvasLocation" x="1236" y="374.66266866566718"/>
         </scene>
         <!--Bar List-->
         <scene sceneID="CeV-NY-rl1">
@@ -47,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAR FINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-YM-Jdl" customClass="UIBarListTitlelabel" customModule="BarFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="375" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="21.5" width="375" height="22.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
