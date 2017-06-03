@@ -1,14 +1,14 @@
 //
-//  DidFinishLaunchingViewController.swift
+//  Bar.swift
 //  BarFinder
 //
 //  Created by Damien Laughton on 03/06/2017.
 //  Copyright © 2017 Mobilology Limited. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-@IBDesignable class DidFinishLaunchingViewController: RootViewController {
-
+struct Bar {
+  var barName: String = String()
+  var distance: String = String()
 }
-

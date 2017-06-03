@@ -8,6 +8,19 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+@IBDesignable class RootViewController: UIViewController {
+
+  override func viewDidLoad() {
+    self.configure()
+  }
+
+  internal func configure() {
+    //Do Nothing
+  }
+
+  override func prepareForInterfaceBuilder() {
+    configure()
+    super.prepareForInterfaceBuilder()
+  }
   
 }

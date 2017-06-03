@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UIBarListTableViewCell" rowHeight="40" id="jLK-NI-Wnb" customClass="UIBarListTableViewCell" customModule="BarFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jLK-NI-Wnb" id="XUk-vr-LqO">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="255" horizontalCompressionResistancePriority="755" image="glass_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ryJ-7g-xM7" userLabel="bar_icon">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-JL-OuG" userLabel="bar_name" customClass="UIBarListLabel" customModule="BarFinder" customModuleProvider="target">
+                        <rect key="frame" x="30" y="0.0" width="170" height="39.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXt-uS-MEd" userLabel="distance" customClass="UIBarListLabel" customModule="BarFinder" customModuleProvider="target">
+                        <rect key="frame" x="200" y="0.0" width="85" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="255" horizontalCompressionResistancePriority="755" image="distance_icon" translatesAutoresizingMaskIntoConstraints="NO" id="u1y-ej-3eb">
+                        <rect key="frame" x="285" y="0.0" width="30" height="40"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kR-u4-wqZ" userLabel="Line">
+                        <rect key="frame" x="0.0" y="38.5" width="315" height="1"/>
+                        <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dku-gB-IIx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8kR-u4-wqZ" secondAttribute="trailing" id="0FW-m5-fRb"/>
+                    <constraint firstItem="IMY-JL-OuG" firstAttribute="top" secondItem="XUk-vr-LqO" secondAttribute="top" id="1Sv-8Y-FKF"/>
+                    <constraint firstItem="IMY-JL-OuG" firstAttribute="leading" secondItem="ryJ-7g-xM7" secondAttribute="trailing" id="1jD-YF-AUI"/>
+                    <constraint firstItem="u1y-ej-3eb" firstAttribute="top" secondItem="XUk-vr-LqO" secondAttribute="top" id="2fQ-wy-E4C"/>
+                    <constraint firstItem="ryJ-7g-xM7" firstAttribute="width" secondItem="XUk-vr-LqO" secondAttribute="width" multiplier="0.0952" id="7xm-c6-zpY"/>
+                    <constraint firstItem="ryJ-7g-xM7" firstAttribute="top" secondItem="XUk-vr-LqO" secondAttribute="top" id="9Cm-Hs-ege"/>
+                    <constraint firstItem="u1y-ej-3eb" firstAttribute="leading" secondItem="xXt-uS-MEd" secondAttribute="trailing" id="Dh2-pB-fvO"/>
+                    <constraint firstAttribute="bottom" secondItem="u1y-ej-3eb" secondAttribute="bottom" id="Fsc-ti-nkS"/>
+                    <constraint firstAttribute="bottom" secondItem="IMY-JL-OuG" secondAttribute="bottom" id="OCF-re-lF8"/>
+                    <constraint firstItem="8kR-u4-wqZ" firstAttribute="leading" secondItem="XUk-vr-LqO" secondAttribute="leading" id="PDo-sh-XKh"/>
+                    <constraint firstAttribute="bottom" secondItem="ryJ-7g-xM7" secondAttribute="bottom" id="V4f-kA-eHq"/>
+                    <constraint firstAttribute="bottom" secondItem="8kR-u4-wqZ" secondAttribute="bottom" id="a3M-m7-TdD"/>
+                    <constraint firstAttribute="trailing" secondItem="u1y-ej-3eb" secondAttribute="trailing" id="bhi-aC-rSA"/>
+                    <constraint firstAttribute="bottom" secondItem="xXt-uS-MEd" secondAttribute="bottom" id="cEa-0D-sVf"/>
+                    <constraint firstItem="xXt-uS-MEd" firstAttribute="top" secondItem="XUk-vr-LqO" secondAttribute="top" id="d4a-2D-SJP"/>
+                    <constraint firstItem="xXt-uS-MEd" firstAttribute="leading" secondItem="IMY-JL-OuG" secondAttribute="trailing" id="dY0-QE-aCA"/>
+                    <constraint firstItem="u1y-ej-3eb" firstAttribute="width" secondItem="XUk-vr-LqO" secondAttribute="width" multiplier="0.0952" id="gPI-da-w60"/>
+                    <constraint firstItem="IMY-JL-OuG" firstAttribute="width" secondItem="XUk-vr-LqO" secondAttribute="width" multiplier="0.5396" id="s7O-pu-ihv"/>
+                    <constraint firstItem="ryJ-7g-xM7" firstAttribute="leading" secondItem="XUk-vr-LqO" secondAttribute="leading" id="xWr-Jl-IV6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="barNameLabel" destination="IMY-JL-OuG" id="deT-eE-fbB"/>
+                <outlet property="distanceLabel" destination="xXt-uS-MEd" id="rGJ-HD-1mE"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="-13"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="distance_icon" width="22" height="22"/>
+        <image name="glass_icon" width="22" height="22"/>
+    </resources>
+</document>

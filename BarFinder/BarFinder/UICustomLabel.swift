@@ -15,6 +15,11 @@ import UIKit
   
   // Overide tracking to effect the kerning
   // This number taken directly from JLR spec document
+  
+  //override this if a subclass is going to ignore the user color
+  var overrideColor: UIColor? { return .none }
+  
+  
   var fontTracking: CGFloat { return 0.0 }
   var kerningValue: CGFloat {
     return (self.pointSize * self.fontTracking) / 1000
@@ -64,6 +69,10 @@ import UIKit
     
     font = attributedFont
     textColor = color
+    
+    if let _overrideColor = overrideColor {
+      textColor = _overrideColor
+    }
     
     self.configureAttributedText()
   }
