@@ -19,7 +19,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   @IBOutlet weak var debugLabel: UILabel!
   
   var bars: [Bar] = []
-  var startLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
+  var mockLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
   var currentLocation: CLLocationCoordinate2D? = .none
   
   internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
@@ -41,9 +41,8 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     super.viewDidAppear(animated)
     
     self.removeMask(animated: true, completionHandler: { _ in
-    
 
-      self.zoomToLocation(location: self.startLocation)
+      self.zoomToCurrentLocation()
       
       if (self.bars.count > 0) {
         self.addMarkersToMap(bars: self.bars)
@@ -68,7 +67,9 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     guard let location = note.object as? CLLocation else { return }
     
     if (self.currentLocation == nil) {
-      self.debugLabel.text = "lon: \(location.coordinate.longitude) - lat:\(location.coordinate.latitude)"
+      let debugText = "lon: \(location.coordinate.longitude) - lat:\(location.coordinate.latitude)"
+      print("****\(debugText)")
+      self.debugLabel.text = debugText
       self.zoomToLocation(location: location.coordinate)
     }
     
@@ -76,11 +77,17 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
 //  TODO set current location
   }
   
+  private func zoomToCurrentLocation() {
+    let location = self.currentLocation ?? self.mockLocation
+
+    self.zoomToLocation(location: location)
+  }
+  
   private func zoomToLocation(location: CLLocationCoordinate2D) {
-    let sydney = GMSCameraPosition.camera(withLatitude: location.latitude,
+    let camera = GMSCameraPosition.camera(withLatitude: location.latitude,
                                           longitude: location.longitude,
                                           zoom: self.CITY_ZOOM_LEVEL)
-    self.mapView.camera = sydney
+    self.mapView.camera = camera
   }
   
   private func addMarkersToMap(bars: [Bar]) {
@@ -124,6 +131,13 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     })
     
   }
+  
+  //MARK:- IBAction(s)
+  
+  @IBAction func arrowTapped(_ sender: UIButton) {
+    self.zoomToCurrentLocation()
+  }
+  
 
   
 }

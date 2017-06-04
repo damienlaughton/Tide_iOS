@@ -28,6 +28,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-WJ-5qZ">
+                                <rect key="frame" x="311" y="20" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Ox-WJ-5qZ" secondAttribute="height" multiplier="1:1" id="1VM-W5-dMp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="location_services_arrow"/>
+                                <connections>
+                                    <action selector="arrowTapped:" destination="mj7-sI-FkC" eventType="touchUpInside" id="r0W-kG-avv"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-4C-wJ4">
                                 <rect key="frame" x="0.0" y="518" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.69411764710000001" blue="0.97254901959999995" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
@@ -57,6 +67,8 @@
                             <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="Ppt-4C-wJ4" secondAttribute="bottom" id="54k-th-Cfo"/>
                             <constraint firstItem="oSK-Vb-xoN" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" id="7O9-HO-89g"/>
                             <constraint firstAttribute="trailing" secondItem="M0V-q4-015" secondAttribute="trailing" id="DbY-4F-WeF"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ox-WJ-5qZ" secondAttribute="trailing" id="FGD-gv-z5y"/>
+                            <constraint firstItem="9Ox-WJ-5qZ" firstAttribute="width" secondItem="l6M-cA-btH" secondAttribute="width" multiplier="0.1706" id="GFW-mT-qYX"/>
                             <constraint firstItem="M0V-q4-015" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" id="M4v-YY-MYJ"/>
                             <constraint firstItem="oSK-Vb-xoN" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="MaQ-4U-IZD"/>
                             <constraint firstAttribute="trailing" secondItem="Ppt-4C-wJ4" secondAttribute="trailing" id="NDL-PD-xzw"/>
@@ -64,6 +76,7 @@
                             <constraint firstAttribute="trailing" secondItem="oSK-Vb-xoN" secondAttribute="trailing" id="W05-X2-YNG"/>
                             <constraint firstItem="Ppt-4C-wJ4" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="cTd-Dx-X8C"/>
                             <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="M0V-q4-015" secondAttribute="bottom" id="eLb-tZ-xRM"/>
+                            <constraint firstItem="9Ox-WJ-5qZ" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" constant="20" id="hSO-XW-Tnc"/>
                             <constraint firstItem="M0V-q4-015" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="isG-yg-84t"/>
                         </constraints>
                     </view>
@@ -320,6 +333,7 @@ TURNED OFF</string>
         <image name="distance_icon" width="22" height="22"/>
         <image name="glass" width="240" height="240"/>
         <image name="glass_icon" width="22" height="22"/>
+        <image name="location_services_arrow" width="64" height="64"/>
         <image name="status_location_services" width="64" height="64"/>
     </resources>
 </document>
