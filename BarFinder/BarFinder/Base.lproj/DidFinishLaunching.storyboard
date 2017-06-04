@@ -25,9 +25,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSK-Vb-xoN" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-4C-wJ4">
+                                <rect key="frame" x="0.0" y="518" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.69411764710000001" blue="0.97254901959999995" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fkN-b4-75D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0V-q4-015">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
@@ -45,18 +54,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="Ppt-4C-wJ4" secondAttribute="bottom" id="54k-th-Cfo"/>
                             <constraint firstItem="oSK-Vb-xoN" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" id="7O9-HO-89g"/>
                             <constraint firstAttribute="trailing" secondItem="M0V-q4-015" secondAttribute="trailing" id="DbY-4F-WeF"/>
                             <constraint firstItem="M0V-q4-015" firstAttribute="top" secondItem="l6M-cA-btH" secondAttribute="top" id="M4v-YY-MYJ"/>
                             <constraint firstItem="oSK-Vb-xoN" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="MaQ-4U-IZD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ppt-4C-wJ4" secondAttribute="trailing" id="NDL-PD-xzw"/>
+                            <constraint firstItem="Ppt-4C-wJ4" firstAttribute="top" secondItem="oSK-Vb-xoN" secondAttribute="bottom" id="V5S-h5-sR6"/>
                             <constraint firstAttribute="trailing" secondItem="oSK-Vb-xoN" secondAttribute="trailing" id="W05-X2-YNG"/>
+                            <constraint firstItem="Ppt-4C-wJ4" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="cTd-Dx-X8C"/>
                             <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="M0V-q4-015" secondAttribute="bottom" id="eLb-tZ-xRM"/>
                             <constraint firstItem="M0V-q4-015" firstAttribute="leading" secondItem="l6M-cA-btH" secondAttribute="leading" id="isG-yg-84t"/>
-                            <constraint firstItem="W2U-Me-vn7" firstAttribute="top" secondItem="oSK-Vb-xoN" secondAttribute="bottom" id="vu0-Sj-xEW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Near me" image="distance_icon" selectedImage="distance_icon" id="Pf3-4u-062"/>
                     <connections>
+                        <outlet property="debugLabel" destination="Ppt-4C-wJ4" id="CEg-0q-Uzh"/>
                         <outlet property="mapView" destination="oSK-Vb-xoN" id="YVU-Fo-5wq"/>
                         <outlet property="maskView" destination="M0V-q4-015" id="MDr-u9-h50"/>
                     </connections>

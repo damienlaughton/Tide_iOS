@@ -15,10 +15,11 @@ typealias LocationReceivedCompletionHandler = (CLLocation/*, Bool, Double*/) -> 
 class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
   
   static let sharedInstance = LocationManagerSingleton()
-  
-  private let activityType = CLActivityType.otherNavigation
+
+//      Unused in this implementation
+//  private let activityType = CLActivityType.otherNavigation
+//  private let distanceFilter = 1.0
   private let desiredAccuracy = kCLLocationAccuracyBest
-  private let distanceFilter = 1.0
   
   //User Defaults Variables
   private let DEFAULTS_IS_UPDATING = "isUpdating"
@@ -44,9 +45,10 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
     DispatchQueue.main.async {
       self.locationManager = CLLocationManager()
       self.locationManager?.delegate = self
-      self.locationManager?.activityType = self.activityType
+//      Unused in this implementation
+//      self.locationManager?.activityType = self.activityType
+//      self.locationManager?.distanceFilter = self.distanceFilter
       self.locationManager?.desiredAccuracy = self.desiredAccuracy
-      self.locationManager?.distanceFilter = self.distanceFilter
       self.locationManager?.allowsBackgroundLocationUpdates = false
       self.locationManager?.pausesLocationUpdatesAutomatically = false
     }
@@ -55,22 +57,20 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
   
   func authorize() {
     DispatchQueue.main.async {
-      self.locationManager?.requestWhenInUseAuthorization()
+      self.locationManager?.requestAlwaysAuthorization()
     }
   }
   
   func start() {
-    if (CLLocationManager.authorizationStatus() == .authorizedAlways) {
+    if (self.isAuthorizedToStart()) {
       isUpdating = true
       locationManager?.startUpdatingLocation()
-      locationManager?.startMonitoringSignificantLocationChanges()
     }
   }
   
   func stop() {
     isUpdating = false
     locationManager?.stopUpdatingLocation()
-    locationManager?.stopMonitoringSignificantLocationChanges()
   }
   
   //MARK:- CLLocationManagerDelegate
@@ -86,7 +86,8 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
   }
   
   public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-    
+  //TODO:- Should this stop or ?
+    locationManager?.stopUpdatingLocation()
   }
   
   public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

@@ -15,7 +15,7 @@ extension LocationManagerSingleton {
   }
   
   func isAuthorizedToStart () -> Bool {
-    let isAuthorizedToStart = self.locationServicesEnabled() && self.locationServicesEnabledWhenInUse()
+    let isAuthorizedToStart = self.locationServicesEnabled() && self.locationServicesEnabledAlways()
     
     return isAuthorizedToStart
   }
