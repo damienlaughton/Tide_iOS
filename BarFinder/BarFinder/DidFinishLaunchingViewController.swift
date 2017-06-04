@@ -22,7 +22,14 @@ import UIKit
     super.viewDidAppear(animated)
     
     self.performLaunchAnimation(completionHandler: { _ in
-      self.launchTabBarController()
+    
+      if (!LocationManagerSingleton.sharedInstance.isAuthorizedToStart()) {
+        self.performSegue(withIdentifier: "DidFinishLaunchingSegueLocationServices", sender: self)
+      } else {
+        LocationManagerSingleton.sharedInstance.onLocationReceived = LocationManagerSingleton.defaultOnLocationHandler
+        LocationManagerSingleton.sharedInstance.start()
+        self.launchTabBarController()
+      }
     })
   }
 

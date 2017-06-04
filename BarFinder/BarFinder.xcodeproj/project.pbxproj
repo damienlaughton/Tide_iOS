@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D01F0961EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D01F0951EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift */; };
+		6D01F0981EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D01F0971EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift */; };
 		6D25E9B41EE2905B00F09ECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D25E9B31EE2905B00F09ECE /* AppDelegate.swift */; };
 		6D25E9B61EE2905B00F09ECE /* DidFinishLaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D25E9B51EE2905B00F09ECE /* DidFinishLaunchingViewController.swift */; };
 		6D25E9B91EE2905B00F09ECE /* DidFinishLaunching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D25E9B71EE2905B00F09ECE /* DidFinishLaunching.storyboard */; };
@@ -24,7 +26,6 @@
 		6D25E9E01EE2AE7400F09ECE /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D25E9DF1EE2AE7400F09ECE /* Bar.swift */; };
 		6D30D3FA1EE314A6004B00E0 /* LocationManagerSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30D3F91EE314A6004B00E0 /* LocationManagerSingleton.swift */; };
 		6D30D3FC1EE32B65004B00E0 /* LocationManagerSingleton+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30D3FB1EE32B65004B00E0 /* LocationManagerSingleton+Authorization.swift */; };
-		6D30D3FE1EE32CFF004B00E0 /* LocationServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D30D3FD1EE32CFF004B00E0 /* LocationServices.storyboard */; };
 		6D30D4001EE32FF3004B00E0 /* LocationServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30D3FF1EE32FF3004B00E0 /* LocationServicesViewController.swift */; };
 		6D39A1021EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39A1011EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift */; };
 		6D39A1051EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D39A1041EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D01F0951EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationManagerSingleton+HandleLocationEvent.swift"; sourceTree = "<group>"; };
+		6D01F0971EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+BarFinderNotifications.swift"; sourceTree = "<group>"; };
 		6D25E9B01EE2905B00F09ECE /* BarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D25E9B31EE2905B00F09ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D25E9B51EE2905B00F09ECE /* DidFinishLaunchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidFinishLaunchingViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		6D25E9DF1EE2AE7400F09ECE /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		6D30D3F91EE314A6004B00E0 /* LocationManagerSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerSingleton.swift; sourceTree = "<group>"; };
 		6D30D3FB1EE32B65004B00E0 /* LocationManagerSingleton+Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationManagerSingleton+Authorization.swift"; sourceTree = "<group>"; };
-		6D30D3FD1EE32CFF004B00E0 /* LocationServices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationServices.storyboard; sourceTree = "<group>"; };
 		6D30D3FF1EE32FF3004B00E0 /* LocationServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServicesViewController.swift; sourceTree = "<group>"; };
 		6D39A1011EE2CAE600E2E2B2 /* UIBarListTitlelabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarListTitlelabel.swift; sourceTree = "<group>"; };
 		6D39A1041EE2CC8B00E2E2B2 /* UIBarFinderTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarFinderTabBarController.swift; sourceTree = "<group>"; };
@@ -142,7 +144,6 @@
 			children = (
 				6D25E9BC1EE2905B00F09ECE /* LaunchScreen.storyboard */,
 				6D25E9B71EE2905B00F09ECE /* DidFinishLaunching.storyboard */,
-				6D30D3FD1EE32CFF004B00E0 /* LocationServices.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -181,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				6D25E9CF1EE292DD00F09ECE /* UIColor+BarFinderColors.swift */,
+				6D01F0971EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 			children = (
 				6D30D3F91EE314A6004B00E0 /* LocationManagerSingleton.swift */,
 				6D30D3FB1EE32B65004B00E0 /* LocationManagerSingleton+Authorization.swift */,
+				6D01F0951EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift */,
 			);
 			name = "Singleton Managers";
 			sourceTree = "<group>";
@@ -293,7 +296,6 @@
 			files = (
 				6D39A10B1EE2F57B00E2E2B2 /* Podfile in Resources */,
 				6D25E9BE1EE2905B00F09ECE /* LaunchScreen.storyboard in Resources */,
-				6D30D3FE1EE32CFF004B00E0 /* LocationServices.storyboard in Resources */,
 				6DB4514C1EE2FB3E00688F7F /* MapStyle.json in Resources */,
 				6D25E9DB1EE2A7F800F09ECE /* UIBarListTableViewCell.xib in Resources */,
 				6D25E9BB1EE2905B00F09ECE /* Assets.xcassets in Resources */,
@@ -361,7 +363,9 @@
 				6D25E9B61EE2905B00F09ECE /* DidFinishLaunchingViewController.swift in Sources */,
 				6D25E9E01EE2AE7400F09ECE /* Bar.swift in Sources */,
 				6D25E9DD1EE2A9D000F09ECE /* UIBarListLabel.swift in Sources */,
+				6D01F0981EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift in Sources */,
 				6D30D4001EE32FF3004B00E0 /* LocationServicesViewController.swift in Sources */,
+				6D01F0961EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift in Sources */,
 				6D25E9B41EE2905B00F09ECE /* AppDelegate.swift in Sources */,
 				6D39A1071EE2DDFA00E2E2B2 /* GlobalDefinitions.swift in Sources */,
 				6D25E9D01EE292DD00F09ECE /* UIColor+BarFinderColors.swift in Sources */,

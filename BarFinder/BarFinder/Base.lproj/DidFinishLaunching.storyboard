@@ -176,6 +176,7 @@
                         <outlet property="titleCenterXConstraint" destination="JcP-gC-lNm" id="OXG-o4-2k5"/>
                         <outlet property="titleImageView" destination="5qy-sl-Jxq" id="Szf-mm-Qjh"/>
                         <segue destination="uKx-4B-Tf4" kind="showDetail" identifier="DidFinishLaunchingSegueTabBarController" animates="NO" action="showViewController:sender:" id="wNg-Lj-EUX"/>
+                        <segue destination="vo5-ri-cC2" kind="presentation" identifier="DidFinishLaunchingSegueLocationServices" id="Hhc-6x-1pR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIN-p2-W4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,11 +201,112 @@
             </objects>
             <point key="canvasLocation" x="284" y="47"/>
         </scene>
+        <!--Location Services View Controller-->
+        <scene sceneID="Jeh-dX-JLc">
+            <objects>
+                <viewController storyboardIdentifier="LocationServicesViewController" automaticallyAdjustsScrollViewInsets="NO" id="vo5-ri-cC2" customClass="LocationServicesViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZNT-Iv-vhQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDN-jV-FSE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eak-wG-8Lu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="status_location_services" translatesAutoresizingMaskIntoConstraints="NO" id="NNS-Lr-me2">
+                                <rect key="frame" x="155" y="228" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NNS-Lr-me2" secondAttribute="height" multiplier="1:1" id="hLB-jF-Zew"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION SERVICES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-Y2-60g" customClass="UITitleLabel" customModule="BarFinder" customModuleProvider="target">
+                                <rect key="frame" x="10" y="30" width="355" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3dL-Y2-60g" secondAttribute="height" multiplier="355:83" id="20v-nR-8Ww"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yx5-9H-9F6" customClass="UITitleLabel" customModule="BarFinder" customModuleProvider="target">
+                                <rect key="frame" x="10" y="292" width="355" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yx5-9H-9F6" secondAttribute="height" multiplier="355:83" id="rDS-bH-Sl0"/>
+                                </constraints>
+                                <string key="text">LOCATION SERVICES
+TURNED OFF</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ene-ha-dZt">
+                                <rect key="frame" x="30" y="582" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.1215686275" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ene-ha-dZt" secondAttribute="height" multiplier="63:10" id="WFb-zL-BBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="TURN ON LOCATION SERVICES"/>
+                                <connections>
+                                    <action selector="handleTurnOnLocationServicesWithButton:" destination="vo5-ri-cC2" eventType="touchUpInside" id="TrD-0i-9bd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BarFinder uses your location in order to help you get drinks quicker!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Tv-XHU" customClass="UIBodyLabel" customModule="BarFinder" customModuleProvider="target">
+                                <rect key="frame" x="10" y="375" width="355" height="88"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Yx5-9H-9F6" firstAttribute="leading" secondItem="Eak-wG-8Lu" secondAttribute="leading" constant="10" id="42V-85-0Jf"/>
+                            <constraint firstItem="rDN-jV-FSE" firstAttribute="top" secondItem="ene-ha-dZt" secondAttribute="bottom" constant="35" id="7G8-pg-qdd"/>
+                            <constraint firstItem="NNS-Lr-me2" firstAttribute="width" secondItem="Eak-wG-8Lu" secondAttribute="width" multiplier="0.1706" id="AKi-DM-gUF"/>
+                            <constraint firstItem="eRr-Tv-XHU" firstAttribute="width" secondItem="eRr-Tv-XHU" secondAttribute="height" multiplier="355:88" id="B9T-9u-exD"/>
+                            <constraint firstItem="NNS-Lr-me2" firstAttribute="centerX" secondItem="Eak-wG-8Lu" secondAttribute="centerX" id="Ezf-ar-z2i"/>
+                            <constraint firstAttribute="trailing" secondItem="3dL-Y2-60g" secondAttribute="trailing" constant="10" id="M1M-20-4oq"/>
+                            <constraint firstItem="eRr-Tv-XHU" firstAttribute="top" secondItem="Yx5-9H-9F6" secondAttribute="bottom" id="MN0-gZ-AOt"/>
+                            <constraint firstItem="ene-ha-dZt" firstAttribute="width" secondItem="Eak-wG-8Lu" secondAttribute="width" multiplier="0.84" id="P23-jm-IJh"/>
+                            <constraint firstItem="ene-ha-dZt" firstAttribute="centerX" secondItem="Eak-wG-8Lu" secondAttribute="centerX" id="R4m-M6-a08"/>
+                            <constraint firstAttribute="trailing" secondItem="eRr-Tv-XHU" secondAttribute="trailing" constant="10" id="SxP-nV-x0c"/>
+                            <constraint firstItem="Yx5-9H-9F6" firstAttribute="centerX" secondItem="Eak-wG-8Lu" secondAttribute="centerX" id="UMk-E7-sUF"/>
+                            <constraint firstAttribute="trailing" secondItem="Yx5-9H-9F6" secondAttribute="trailing" constant="10" id="eYO-Xg-xhc"/>
+                            <constraint firstItem="Yx5-9H-9F6" firstAttribute="top" secondItem="NNS-Lr-me2" secondAttribute="bottom" id="kFo-mw-VuP"/>
+                            <constraint firstItem="3dL-Y2-60g" firstAttribute="leading" secondItem="Eak-wG-8Lu" secondAttribute="leading" constant="10" id="nKT-XK-Ine"/>
+                            <constraint firstItem="3dL-Y2-60g" firstAttribute="top" secondItem="ZNT-Iv-vhQ" secondAttribute="bottom" constant="10" id="tvn-ZO-18K"/>
+                            <constraint firstItem="Yx5-9H-9F6" firstAttribute="centerY" secondItem="Eak-wG-8Lu" secondAttribute="centerY" id="uf0-E5-RBM"/>
+                            <constraint firstItem="eRr-Tv-XHU" firstAttribute="leading" secondItem="Eak-wG-8Lu" secondAttribute="leading" constant="10" id="vLr-Jh-Pzh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwA-fT-X91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="-682"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BarFinderTitle" width="414" height="60"/>
         <image name="distance_icon" width="22" height="22"/>
         <image name="glass" width="240" height="240"/>
         <image name="glass_icon" width="22" height="22"/>
+        <image name="status_location_services" width="64" height="64"/>
     </resources>
 </document>

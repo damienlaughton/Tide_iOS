@@ -18,8 +18,14 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   
   var bars: [Bar] = []
   var startLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
+  var currentLocation: CLLocationCoordinate2D? = .none
   
   internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
+  
+  
+  deinit {
+        NotificationCenter.default.removeObserver(self, name: .LocationUpdated, object: .none)
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -52,7 +58,19 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     
     mapView.delegate = self
     mapView.isMyLocationEnabled = true
-
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(locationUpdated), name: .LocationUpdated, object: nil)
+  }
+  
+  @objc private func locationUpdated(note: NSNotification) {
+    guard let location = note.object as? CLLocation else { return }
+    
+    if (self.currentLocation == nil) {
+      self.zoomToLocation(location: location.coordinate)
+    }
+    
+    self.currentLocation = location.coordinate
+//  TODO set current location
   }
   
   private func zoomToLocation(location: CLLocationCoordinate2D) {

@@ -10,6 +10,23 @@ import UIKit
 import Foundation
 
 class LocationServicesViewController: RootViewController {
+
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: .UIApplicationDidBecomeActive, object: .none)
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: .UIApplicationDidBecomeActive, object: .none)
+  }
+  
+  @objc func applicationDidBecomeActive() {
+    if LocationManagerSingleton.sharedInstance.isAuthorizedToStart() {
+      LocationManagerSingleton.sharedInstance.start()
+      self.dismiss(animated: true, completion: .none)
+    }
+  }
   
   @IBAction func handleTurnOnLocationServices(button: UIButton) {
     
@@ -28,31 +45,21 @@ class LocationServicesViewController: RootViewController {
       DispatchQueue.main.async {
         if (status == .authorizedAlways) {
           LocationManagerSingleton.sharedInstance.start()
-//          TODO:Dismiss
+          self.dismiss(animated: true, completion: .none)
         }
       }
     }
     
-    LocationManagerSingleton.sharedInstance.onLocationReceived = { location in
-      
-      //TODO - Do Something with Location
-
-    }
+    LocationManagerSingleton.sharedInstance.onLocationReceived = LocationManagerSingleton.defaultOnLocationHandler
+    
     
     if LocationManagerSingleton.sharedInstance.isAuthorizedToStart() {
-      
       LocationManagerSingleton.sharedInstance.start()
-      
-
     }
     else if LocationManagerSingleton.sharedInstance.isAuthorizedNotDetermined() {
-      
       LocationManagerSingleton.sharedInstance.authorize()
-//          TODO:Dismiss
-
     }
     else {
-      
       //TODO: Handle awkwardness
     }
   }
