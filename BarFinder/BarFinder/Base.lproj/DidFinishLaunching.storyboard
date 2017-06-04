@@ -251,7 +251,7 @@ TURNED OFF</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ene-ha-dZt">
                                 <rect key="frame" x="30" y="582" width="315" height="50"/>
-                                <color key="backgroundColor" red="0.60784313729999995" green="0.1215686275" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74509803919999995" green="0.1960784314" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ene-ha-dZt" secondAttribute="height" multiplier="63:10" id="WFb-zL-BBf"/>
                                 </constraints>
