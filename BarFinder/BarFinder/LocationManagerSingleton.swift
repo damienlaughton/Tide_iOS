@@ -71,6 +71,10 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
     locationManager?.stopUpdatingLocation()
   }
   
+  func currentLocation() -> CLLocation? {
+    return self.locationManager?.location
+  }
+  
   //MARK:- CLLocationManagerDelegate
   public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     

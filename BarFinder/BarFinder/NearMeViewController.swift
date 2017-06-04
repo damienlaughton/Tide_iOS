@@ -19,8 +19,8 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   @IBOutlet weak var debugLabel: UILabel?
   
   var bars: [Bar] = []
-  var mockLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
-  var currentLocation: CLLocationCoordinate2D? = .none
+  var mockCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
+  var currentCoordinate: CLLocationCoordinate2D? = LocationManagerSingleton.sharedInstance.currentLocation()?.coordinate
   
   internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
   
@@ -42,7 +42,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     
     self.removeMask(animated: true, completionHandler: { _ in
 
-      self.zoomToCurrentLocation()
+      self.zoomToCurrentCoordinate()
       
       if (self.bars.count > 0) {
         self.addMarkersToMap(bars: self.bars)
@@ -75,12 +75,12 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
       self.zoomToLocation(location: location.coordinate)
 //    }
     
-    self.currentLocation = location.coordinate
+    self.currentCoordinate = location.coordinate
 //  TODO set current location
   }
   
-  private func zoomToCurrentLocation() {
-    let location = self.currentLocation ?? self.mockLocation
+  private func zoomToCurrentCoordinate() {
+    let location = self.currentCoordinate ?? self.mockCoordinate
 
     self.zoomToLocation(location: location)
   }
@@ -137,7 +137,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   //MARK:- IBAction(s)
   
   @IBAction func arrowTapped(_ sender: UIButton) {
-    self.zoomToCurrentLocation()
+    self.zoomToCurrentCoordinate()
   }
   
 
