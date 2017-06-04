@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/NearMeViewController.swift"
-            timestampString = "518251831.422953"
+            timestampString = "518253051.401351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "locationUpdated(note:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
-            timestampString = "518250318.904621"
+            timestampString = "518254319.80696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "locationManager(_:didFailWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,87 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
-            timestampString = "518250780.83561"
+            timestampString = "518254319.80696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
+            timestampString = "518254319.80696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
+            timestampString = "518254319.80696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
+            timestampString = "518254319.80696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "stop()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
+            timestampString = "518254319.80696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
+            timestampString = "518254319.80696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -89,30 +169,197 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
-            timestampString = "518250780.83561"
+            filePath = "BarFinder/BarFinder/NearMeViewController.swift"
+            timestampString = "518253577.313656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "start()"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "locationUpdated(note:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarFinder/BarFinder/LocationManagerSingleton.swift"
-            timestampString = "518250780.83561"
+            filePath = "BarFinder/BarFinder/RootViewController.swift"
+            timestampString = "518254319.295356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "configDebugLabel()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.DidFinishLaunchingViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.440222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc BarFinder.DidFinishLaunchingViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.442916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.LocationServicesViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.445695"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.RootViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.448087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.RootViewController.configure () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.450564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.RootViewController.prepareForInterfaceBuilder () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.452755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc BarFinder.RootViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.454911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc BarFinder.RootViewController.configDebugLabel () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.457084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc BarFinder.RootViewController.prepareForInterfaceBuilder () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.45912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.NearMeViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.461155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.BarListViewController.configure () -&gt; ()"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/RootViewController.swift"
+                  timestampString = "518254479.463227"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

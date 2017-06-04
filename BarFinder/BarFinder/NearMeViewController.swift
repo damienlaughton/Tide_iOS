@@ -16,7 +16,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   @IBOutlet weak var maskView: UIView!
   private let CITY_ZOOM_LEVEL = Float(15)
   
-  @IBOutlet weak var debugLabel: UILabel!
+  @IBOutlet weak var debugLabel: UILabel?
   
   var bars: [Bar] = []
   var mockLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
@@ -66,12 +66,14 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   @objc private func locationUpdated(note: NSNotification) {
     guard let location = note.object as? CLLocation else { return }
     
-    if (self.currentLocation == nil) {
-      let debugText = "lon: \(location.coordinate.longitude) - lat:\(location.coordinate.latitude)"
-      print("****\(debugText)")
-      self.debugLabel.text = debugText
+    let debugText = "lon: \(location.coordinate.longitude) - lat:\(location.coordinate.latitude)"
+    print("****\(debugText)")
+    self.debugLabel?.text = debugText
+
+    
+//    if (self.currentLocation == nil) {
       self.zoomToLocation(location: location.coordinate)
-    }
+//    }
     
     self.currentLocation = location.coordinate
 //  TODO set current location

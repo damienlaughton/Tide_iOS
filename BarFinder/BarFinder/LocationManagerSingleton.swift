@@ -18,12 +18,11 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
 
 //      Unused in this implementation
 //  private let activityType = CLActivityType.otherNavigation
-//  private let distanceFilter = 1.0
+  private let distanceFilter = 5.0
   private let desiredAccuracy = kCLLocationAccuracyBest
   
   //User Defaults Variables
   private let DEFAULTS_IS_UPDATING = "isUpdating"
-  private let DEFAULTS_HYBRID_TIMESTAMP = "hybridTimestamp"
   private(set) var isUpdating: Bool { //This should persist the setting between app run times
     set(newValue) {
       
@@ -42,16 +41,15 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
   private override init() {
     super.init()
     
-    DispatchQueue.main.async {
-      self.locationManager = CLLocationManager()
-      self.locationManager?.delegate = self
-//      Unused in this implementation
-//      self.locationManager?.activityType = self.activityType
-//      self.locationManager?.distanceFilter = self.distanceFilter
-      self.locationManager?.desiredAccuracy = self.desiredAccuracy
-      self.locationManager?.allowsBackgroundLocationUpdates = false
-      self.locationManager?.pausesLocationUpdatesAutomatically = false
-    }
+    print("INIT")
+    self.locationManager = CLLocationManager()
+    self.locationManager?.delegate = self
+//    Unused in this implementation
+//    self.locationManager?.activityType = self.activityType
+    self.locationManager?.distanceFilter = self.distanceFilter
+    self.locationManager?.desiredAccuracy = self.desiredAccuracy
+    self.locationManager?.allowsBackgroundLocationUpdates = false
+    self.locationManager?.pausesLocationUpdatesAutomatically = false
     
   }
   
@@ -61,7 +59,7 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
     }
   }
   
-  func start() {
+  func start() { print("START")
     if (self.isAuthorizedToStart()) {
       isUpdating = true
       locationManager?.startUpdatingLocation()

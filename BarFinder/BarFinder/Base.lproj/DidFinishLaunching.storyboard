@@ -83,6 +83,7 @@
                     <tabBarItem key="tabBarItem" title="Near me" image="distance_icon" selectedImage="distance_icon" id="Pf3-4u-062"/>
                     <connections>
                         <outlet property="debugLabel" destination="Ppt-4C-wJ4" id="CEg-0q-Uzh"/>
+                        <outlet property="debugLabelHeightConstraint" destination="fkN-b4-75D" id="asb-ID-ozY"/>
                         <outlet property="mapView" destination="oSK-Vb-xoN" id="YVU-Fo-5wq"/>
                         <outlet property="maskView" destination="M0V-q4-015" id="MDr-u9-h50"/>
                     </connections>
