@@ -71,12 +71,39 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     self.debugLabel?.text = debugText
 
     
-//    if (self.currentLocation == nil) {
-      self.zoomToLocation(location: location.coordinate)
-//    }
+    self.zoomToLocation(location: location.coordinate)
     
     self.currentCoordinate = location.coordinate
-//  TODO set current location
+
+    self.updateBars(location: self.currentCoordinate)
+  }
+  
+  func updateBars(location: CLLocationCoordinate2D?) {
+  
+    guard let _location = location else { return }
+  
+    APIManagerSingleton.sharedInstance.performNearbySearch(location: _location) { [unowned self] data, response, error in
+      DispatchQueue.main.async {
+        
+        print("\(self)")
+        let validStatusCode = response?.isValidStatusCode() ?? false
+        
+        if (nil != error) {
+          //error clause
+          print(error ?? "Unknown error")
+        } else if (false == validStatusCode) {
+          // invalid server status
+        } else {
+          //we're good
+          
+          guard let json = data?.json() else { return }
+          print(json)
+          
+          
+          
+        }
+      }
+    }
   }
   
   private func zoomToCurrentCoordinate() {

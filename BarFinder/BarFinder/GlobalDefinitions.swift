@@ -13,3 +13,5 @@ typealias AnimationCompletionHandler = (Bool) -> ()
 typealias VoidCompletionHandler = () -> ()
 
 typealias JSON = [String: Any]
+
+let GOOGLE_API_KEY = "AIzaSyB6AvJCuawPc99PY9CfC6nKVc84IkZ_PhE"

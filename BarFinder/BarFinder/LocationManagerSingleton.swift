@@ -18,7 +18,7 @@ class LocationManagerSingleton: NSObject, CLLocationManagerDelegate {
 
 //      Unused in this implementation
 //  private let activityType = CLActivityType.otherNavigation
-  private let distanceFilter = 5.0
+  private let distanceFilter = 20.0
   private let desiredAccuracy = kCLLocationAccuracyBest
   
   //User Defaults Variables
