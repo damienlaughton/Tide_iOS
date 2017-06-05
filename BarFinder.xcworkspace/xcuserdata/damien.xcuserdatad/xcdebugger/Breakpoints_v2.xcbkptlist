@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/RootViewController.swift"
-            timestampString = "518254319.295356"
+            timestampString = "518355071.269302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "configDebugLabel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/BarListViewController.swift"
-            timestampString = "518353948.557647"
+            timestampString = "518354958.340314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
             <Locations>

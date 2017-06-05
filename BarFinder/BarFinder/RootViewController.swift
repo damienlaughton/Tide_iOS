@@ -23,11 +23,16 @@ import UIKit
   }
   
   func configDebugLabel() {
-    #if DEBUG
-      self.debugLabelHeightConstraint?.constant = 100.0
-    #else
-      self.debugLabelHeightConstraint?.constant = 0.0
-    #endif
+  
+//  Re-Instate the degub Label by switching the code blocks
+  
+  self.debugLabelHeightConstraint?.constant = 0.0
+  
+//    #if DEBUG
+//      self.debugLabelHeightConstraint?.constant = 100.0
+//    #else
+//      self.debugLabelHeightConstraint?.constant = 0.0
+//    #endif
   }
 
   override func prepareForInterfaceBuilder() {
