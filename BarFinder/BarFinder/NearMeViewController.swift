@@ -18,11 +18,12 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   
   @IBOutlet weak var debugLabel: UILabel?
   
-  var bars: [Bar] = []
-  var mockCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 52.224094, longitude: -0.540816)
-  var currentCoordinate: CLLocationCoordinate2D? = LocationManagerSingleton.sharedInstance.currentLocation()?.coordinate
+  var bars: [Bar] = ApplicationDataManager.sharedInstance.VM_latestBarInformation
+  let mockBars = ApplicationDataManager.sharedInstance.mockBars
   
-  internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
+  var currentCoordinate: CLLocationCoordinate2D? = LocationManagerSingleton.sharedInstance.currentLocation()?.coordinate
+  var mockCoordinate: CLLocationCoordinate2D = ApplicationDataManager.sharedInstance.mockCurrentLocation
+  
   
   
   deinit {
@@ -75,36 +76,10 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     
     self.currentCoordinate = location.coordinate
 
-    self.updateBars(location: self.currentCoordinate)
+    ApplicationDataManager.sharedInstance.updateBars(location: self.currentCoordinate)
   }
   
-  func updateBars(location: CLLocationCoordinate2D?) {
   
-    guard let _location = location else { return }
-  
-    APIManagerSingleton.sharedInstance.performNearbySearch(location: _location) { [unowned self] data, response, error in
-      DispatchQueue.main.async {
-        
-        print("\(self)")
-        let validStatusCode = response?.isValidStatusCode() ?? false
-        
-        if (nil != error) {
-          //error clause
-          print(error ?? "Unknown error")
-        } else if (false == validStatusCode) {
-          // invalid server status
-        } else {
-          //we're good
-          
-          guard let json = data?.json() else { return }
-          print(json)
-          
-          
-          
-        }
-      }
-    }
-  }
   
   private func zoomToCurrentCoordinate() {
     let location = self.currentCoordinate ?? self.mockCoordinate

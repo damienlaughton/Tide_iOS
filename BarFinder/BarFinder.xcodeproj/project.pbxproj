@@ -37,6 +37,8 @@
 		6D39A10B1EE2F57B00E2E2B2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6D39A10A1EE2F57B00E2E2B2 /* Podfile */; };
 		6DB4514A1EE2F96200688F7F /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB451491EE2F96200688F7F /* NearMeViewController.swift */; };
 		6DB4514C1EE2FB3E00688F7F /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DB4514B1EE2FB3E00688F7F /* MapStyle.json */; };
+		6DE73E431EE532FC002C91F5 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE73E421EE532FC002C91F5 /* ApplicationDataManager.swift */; };
+		6DE73E451EE53602002C91F5 /* ApplicationDataManager+MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE73E441EE53602002C91F5 /* ApplicationDataManager+MockData.swift */; };
 		855CE8FBBE5E96C5B3E46AC6 /* libPods-BarFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CBEFCC0C482288396FD79A /* libPods-BarFinder.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		6D39A10A1EE2F57B00E2E2B2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		6DB451491EE2F96200688F7F /* NearMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		6DB4514B1EE2FB3E00688F7F /* MapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
+		6DE73E421EE532FC002C91F5 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
+		6DE73E441EE53602002C91F5 /* ApplicationDataManager+MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApplicationDataManager+MockData.swift"; sourceTree = "<group>"; };
 		A0BE17D5D3C302E815C86AB0 /* Pods-BarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarFinder.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder.release.xcconfig"; sourceTree = "<group>"; };
 		A4AB7758111EE3C5E54D3174 /* Pods-BarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarFinder.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BarFinder/Pods-BarFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		E7CBEFCC0C482288396FD79A /* libPods-BarFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BarFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,8 @@
 				6D01F0951EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift */,
 				6D01F0991EE3FDF3005B91E9 /* APIManagerSingleton.swift */,
 				6D01F09B1EE408FE005B91E9 /* APIManagerSingleton+NearbySearch.swift */,
+				6DE73E421EE532FC002C91F5 /* ApplicationDataManager.swift */,
+				6DE73E441EE53602002C91F5 /* ApplicationDataManager+MockData.swift */,
 			);
 			name = "Singleton Managers";
 			sourceTree = "<group>";
@@ -376,9 +382,11 @@
 				6D25E9B61EE2905B00F09ECE /* DidFinishLaunchingViewController.swift in Sources */,
 				6D01F09A1EE3FDF3005B91E9 /* APIManagerSingleton.swift in Sources */,
 				6D25E9E01EE2AE7400F09ECE /* Bar.swift in Sources */,
+				6DE73E451EE53602002C91F5 /* ApplicationDataManager+MockData.swift in Sources */,
 				6D25E9DD1EE2A9D000F09ECE /* UIBarListLabel.swift in Sources */,
 				6D01F0981EE33F6F005B91E9 /* Notification+BarFinderNotifications.swift in Sources */,
 				6D30D4001EE32FF3004B00E0 /* LocationServicesViewController.swift in Sources */,
+				6DE73E431EE532FC002C91F5 /* ApplicationDataManager.swift in Sources */,
 				6D01F0961EE33EBA005B91E9 /* LocationManagerSingleton+HandleLocationEvent.swift in Sources */,
 				6D25E9B41EE2905B00F09ECE /* AppDelegate.swift in Sources */,
 				6D39A1071EE2DDFA00E2E2B2 /* GlobalDefinitions.swift in Sources */,
