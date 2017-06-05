@@ -83,17 +83,28 @@ public class ApplicationDataManager {
     
     if let results = json["results"] as? [JSON] {
       for resultItem in results {
-        let name = resultItem["name"] as! String
+        var name = ""
+        if let _name = resultItem["name"] as? String {
+          name = _name
+        }
         var lat = 0.0
         var lon = 0.0
         var distance = 0.0
         
         if let geometry = resultItem["geometry"] as? JSON {
-          lat = geometry["lat"] as! Double
-          lon = geometry["lng"] as! Double
-          
-          if let _distance = self.currentCoordinate?.distanceTo(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)) {
-            distance = _distance
+          if let viewport = geometry["viewport"] as? JSON {
+            if let _lat = viewport["lat"] as? Double
+            {
+              lat = _lat
+            }
+            
+            if let _lon = viewport["lng"] as? Double {
+              lon = _lon
+            }
+            
+            if let _distance = self.currentCoordinate?.distanceTo(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)) {
+              distance = _distance
+            }
           }
         }
         
