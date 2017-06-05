@@ -91,7 +91,7 @@ import UIKit
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   
     let bar = self.bar(indexPath: indexPath)
-  
+  //Untested with google maps
     if let url = URL(string:"comgooglemaps://?center=\(bar.lat),\(bar.lon)&zoom=\(GOOGLE_ZOOM_LEVEL)&views=traffic") {
       if UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -100,8 +100,7 @@ import UIKit
           print("Open url : \(success)")
         })
       } else {
-        if let webURL = URL(string:"https://www.google.com/maps/preview/@\(bar.lat),\(bar.lon),\(GOOGLE_ZOOM_LEVEL)z") {
-        
+          if let webURL = URL(string:"https://maps.google.com/?q=\(bar.lat),\(bar.lon)") {
           if UIApplication.shared.canOpenURL(webURL) {
             UIApplication.shared.open(webURL, options: [:], completionHandler: nil)
             //If you want handle the completion block than
