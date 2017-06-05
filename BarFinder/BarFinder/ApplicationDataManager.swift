@@ -92,23 +92,25 @@ public class ApplicationDataManager {
         var distance = 0.0
         
         if let geometry = resultItem["geometry"] as? JSON {
-          if let viewport = geometry["viewport"] as? JSON {
-            if let _lat = viewport["lat"] as? Double
+          if let location = geometry["location"] as? JSON {
+            if let _lat = location["lat"] as? Double
             {
               lat = _lat
             }
             
-            if let _lon = viewport["lng"] as? Double {
+            if let _lon = location["lng"] as? Double {
               lon = _lon
             }
             
-            if let _distance = self.currentCoordinate?.distanceTo(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)) {
-              distance = _distance
+            if (lat != 0 && lon != 0) {
+              if let _distance = self.currentCoordinate?.distanceTo(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)) {
+                distance = _distance
+              }
             }
           }
         }
         
-        let bar = Bar(barName: name, distance: "\(distance)m", lat: lat, lon: lon)
+        let bar = Bar(barName: name, distance: "\(Int(distance))m", lat: lat, lon: lon)
         
         bars.append(bar)
         
