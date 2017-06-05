@@ -19,6 +19,8 @@ public class ApplicationDataManager {
     NotificationCenter.default.removeObserver(self, name: .LocationUpdated, object: .none)
   }
   
+  var currentCoordinate: CLLocationCoordinate2D? = .none
+  
   internal static let sharedInstance = ApplicationDataManager()
   
   var VM_latestBarInformation: [Bar] {
@@ -35,12 +37,21 @@ public class ApplicationDataManager {
   @objc private func locationUpdated(note: NSNotification) {
     guard let location = note.object as? CLLocation else { return }
     
+    
     self.updateBars(coordinate: location.coordinate)
   }
   
   func updateBars(coordinate: CLLocationCoordinate2D?) {
     
     guard let _coordinate = coordinate else { return }
+    
+    if let _currentCoordinate = self.currentCoordinate {
+      if _currentCoordinate.latitude == _coordinate.latitude && _currentCoordinate.longitude == _coordinate.longitude {
+        return
+      }
+    }
+    
+    self.currentCoordinate = coordinate
     
     APIManagerSingleton.sharedInstance.performNearbySearch(location: _coordinate) { [unowned self] data, response, error in
       DispatchQueue.main.async {
@@ -70,47 +81,30 @@ public class ApplicationDataManager {
     
     var bars: [Bar] = []
     
-//    var lastForecastItem: Forecast = Forecast()
-//    
-//    if let list = weather["list"] as? [JSON] {
-//      
-//      
-//      
-//      for listItem in list {
-//        
-//        let timeInterval = listItem["dt"] as? TimeInterval ?? 0
-//        let date = Date(timeIntervalSince1970: timeInterval)
-//        var temperature = 0.0
-//        if let main = listItem["main"] as? JSON {
-//          if let _temperature = main["temp"] as? Double {
-//            temperature = _temperature
-//          }
-//        }
-//        var description = ""
-//        if let weather = listItem["weather"] as? [JSON] {
-//          if let _weatherZero = weather.first {
-//            let _weatherMain = _weatherZero["main"] as? String ?? ""
-//            let _weatherDescription = _weatherZero["description"] as? String ?? ""
-//            description = "\(_weatherMain) (\(_weatherDescription))"
-//          }
-//        }
-//        
-//        if (lastForecastItem.isEmpty()) {
-//          lastForecastItem.append(date: date, temperature: temperature, description: description)
-//        } else if (lastForecastItem.isSameDate(date: date)) {
-//          lastForecastItem.append(date: date, temperature: temperature, description: description)
-//        } else {
-//          forecast.append(lastForecastItem)
-//          lastForecastItem = Forecast()
-//          
-//          lastForecastItem.append(date: date, temperature: temperature, description: description)
-//        }
-//        
-//      }
-//      
-//      forecast.append(lastForecastItem)
-//      
-//    }
+    if let results = json["results"] as? [JSON] {
+      for resultItem in results {
+        let name = resultItem["name"] as! String
+        var lat = 0.0
+        var lon = 0.0
+        var distance = 0.0
+        
+        if let geometry = resultItem["geometry"] as? JSON {
+          lat = geometry["lat"] as! Double
+          lon = geometry["lng"] as! Double
+          
+          if let _distance = self.currentCoordinate?.distanceTo(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)) {
+            distance = _distance
+          }
+        }
+        
+        let bar = Bar(barName: name, distance: "\(distance)m", lat: lat, lon: lon)
+        
+        bars.append(bar)
+        
+      }
+    }
+    
+
     
     return bars
   }

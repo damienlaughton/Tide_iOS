@@ -198,16 +198,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/ApplicationDataManager.swift"
+            timestampString = "518341469.046871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateBars(coordinate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarFinder/BarFinder/ApplicationDataManager.swift"
+            timestampString = "518342648.055216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "processInformation(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.ApplicationDataManager.(processInformation in _F399BA9B2E9CAF4FD06D4130ACCB38B7) (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Array&lt;BarFinder.Bar&gt;"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/ApplicationDataManager.swift"
+                  timestampString = "518342649.147737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarFinder.ApplicationDataManager.(processInformation in _F399BA9B2E9CAF4FD06D4130ACCB38B7) (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Array&lt;BarFinder.Bar&gt;"
+                  moduleName = "BarFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/xcode_projects/Tide_iOS/BarFinder/BarFinder/ApplicationDataManager.swift"
+                  timestampString = "518342649.150391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "365">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarFinder/BarFinder/ApplicationDataManager.swift"
-            timestampString = "518340033.053668"
+            timestampString = "518342638.724288"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "updateBars(coordinate:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "processInformation(json:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

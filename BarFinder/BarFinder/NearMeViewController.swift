@@ -21,7 +21,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   var bars: [Bar] = ApplicationDataManager.sharedInstance.VM_latestBarInformation
   let mockBars = ApplicationDataManager.sharedInstance.mockBars
   
-  var currentCoordinate: CLLocationCoordinate2D? = LocationManagerSingleton.sharedInstance.currentLocation()?.coordinate
+  var currentCoordinate: CLLocationCoordinate2D? = ApplicationDataManager.sharedInstance.currentCoordinate
   var mockCoordinate: CLLocationCoordinate2D = ApplicationDataManager.sharedInstance.mockCurrentLocation
   
   
