@@ -12,9 +12,8 @@ import UIKit
 
   @IBOutlet weak var tableView: UITableView?
 
-  var bars: [Bar] = []
-  
-  internal let mockBars = [Bar(barName: "Swan with Two Nicks", distance: "75m", lat: 52.225522, lon: -0.543225), Bar(barName: "The Fordham Arms", distance: "600m", lat: 52.224673, lon: -0.534498)]
+  var bars: [Bar] = ApplicationDataManager.sharedInstance.VM_latestBarInformation
+  let mockBars = ApplicationDataManager.sharedInstance.mockBars
   
   internal let cellIdentifier = String(describing: UIBarListTableViewCell.self)
   
@@ -24,6 +23,24 @@ import UIKit
     self.tableView?.backgroundColor = UIColor.barViewBackground()
     
     self.tableView?.register(UINib(nibName: self.cellIdentifier, bundle: nil), forCellReuseIdentifier: self.cellIdentifier)
+  }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: .BarsUpdated, object: .none)
+  }
+  
+  override func viewDidLoad() {
+    
+    super.viewDidLoad()
+
+    NotificationCenter.default.addObserver(self, selector: #selector(updateBars), name: .BarsUpdated, object: nil)
+  }
+  
+  @objc private func updateBars(note: NSNotification) {
+    guard let bars = note.object as? [Bar] else { return }
+    
+    self.bars = bars
+    self.tableView?.reloadData()
   }
   
   func bar(indexPath: IndexPath) -> Bar {

@@ -28,6 +28,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   
   deinit {
         NotificationCenter.default.removeObserver(self, name: .LocationUpdated, object: .none)
+        NotificationCenter.default.removeObserver(self, name: .BarsUpdated, object: .none)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -61,35 +62,40 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
     mapView.delegate = self
     mapView.isMyLocationEnabled = true
     
-    NotificationCenter.default.addObserver(self, selector: #selector(locationUpdated), name: .LocationUpdated, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(updateLocation), name: .LocationUpdated, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(updateBars), name: .BarsUpdated, object: nil)
   }
   
-  @objc private func locationUpdated(note: NSNotification) {
+  @objc private func updateLocation(note: NSNotification) {
     guard let location = note.object as? CLLocation else { return }
     
     let debugText = "lon: \(location.coordinate.longitude) - lat:\(location.coordinate.latitude)"
     print("****\(debugText)")
     self.debugLabel?.text = debugText
 
-    
-    self.zoomToLocation(location: location.coordinate)
-    
     self.currentCoordinate = location.coordinate
 
-    ApplicationDataManager.sharedInstance.updateBars(location: self.currentCoordinate)
+    self.zoomToCoordinate(coordinate: location.coordinate)
+  }
+  
+  @objc private func updateBars(note: NSNotification) {
+    guard let bars = note.object as? [Bar] else { return }
+    
+    self.bars = bars
+    self.addMarkersToMap(bars: self.bars)
   }
   
   
   
   private func zoomToCurrentCoordinate() {
-    let location = self.currentCoordinate ?? self.mockCoordinate
+    let coordinate = self.currentCoordinate ?? self.mockCoordinate
 
-    self.zoomToLocation(location: location)
+    self.zoomToCoordinate(coordinate: coordinate)
   }
   
-  private func zoomToLocation(location: CLLocationCoordinate2D) {
-    let camera = GMSCameraPosition.camera(withLatitude: location.latitude,
-                                          longitude: location.longitude,
+  private func zoomToCoordinate(coordinate: CLLocationCoordinate2D) {
+    let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude,
+                                          longitude: coordinate.longitude,
                                           zoom: self.CITY_ZOOM_LEVEL)
     self.mapView.camera = camera
   }

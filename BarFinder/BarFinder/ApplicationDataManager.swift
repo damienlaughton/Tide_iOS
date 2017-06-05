@@ -10,6 +10,14 @@ import Foundation
 import CoreLocation
 
 public class ApplicationDataManager {
+
+  private init() {
+    NotificationCenter.default.addObserver(self, selector: #selector(locationUpdated), name: .LocationUpdated, object: nil)
+  }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: .LocationUpdated, object: .none)
+  }
   
   internal static let sharedInstance = ApplicationDataManager()
   
@@ -20,15 +28,21 @@ public class ApplicationDataManager {
   
   private var latestBarJson: JSON = [:] {
     didSet {
-      NotificationCenter.default.post(name: .DataUpdated, object: self.VM_latestBarInformation)
+      NotificationCenter.default.post(name: .BarsUpdated, object: self.VM_latestBarInformation)
     }
   }
   
-  func updateBars(location: CLLocationCoordinate2D?) {
+  @objc private func locationUpdated(note: NSNotification) {
+    guard let location = note.object as? CLLocation else { return }
     
-    guard let _location = location else { return }
+    self.updateBars(coordinate: location.coordinate)
+  }
+  
+  func updateBars(coordinate: CLLocationCoordinate2D?) {
     
-    APIManagerSingleton.sharedInstance.performNearbySearch(location: _location) { [unowned self] data, response, error in
+    guard let _coordinate = coordinate else { return }
+    
+    APIManagerSingleton.sharedInstance.performNearbySearch(location: _coordinate) { [unowned self] data, response, error in
       DispatchQueue.main.async {
         
         print("\(self)")

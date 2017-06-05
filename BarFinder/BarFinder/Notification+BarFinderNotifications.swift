@@ -10,6 +10,6 @@ import Foundation
 
 extension Notification.Name {
   static let LocationUpdated = Notification.Name("com.mobilology.locationupdated")
-  static let DataUpdated = Notification.Name("com.mobilology.dataupdated")
+  static let BarsUpdated = Notification.Name("com.mobilology.barsupdated")
 }
 
