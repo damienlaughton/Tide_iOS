@@ -89,7 +89,34 @@ import UIKit
   
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+  
+    let bar = self.bar(indexPath: indexPath)
+  
+    if let url = URL(string:"comgooglemaps://?center=\(bar.lat),\(bar.lon)&zoom=6&views=traffic") {
+      if UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        //If you want handle the completion block than
+        UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+          print("Open url : \(success)")
+        })
+      } else {
+        if let webURL = URL(string:"https://www.google.com/maps/preview/@\(bar.lat),\(bar.lon),6z") {
+        
+          if UIApplication.shared.canOpenURL(webURL) {
+            UIApplication.shared.open(webURL, options: [:], completionHandler: nil)
+            //If you want handle the completion block than
+            UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+              print("Open webURL : \(success)")
+            })
+          } else {
+            // Do Nothing
+          }
+        }
+      }
+    }
+  
+
+
   }
   
 }

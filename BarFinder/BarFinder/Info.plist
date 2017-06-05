@@ -45,5 +45,9 @@
 	<string>Bar Finder uses your location to help you get drinks quicker!</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Bar Finder uses your location to help you get drinks quicker!</string>
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>comgooglemaps</string>
+  </array>
 </dict>
 </plist>
