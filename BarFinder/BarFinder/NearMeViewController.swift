@@ -14,7 +14,6 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
 
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var maskView: UIView!
-  private let CITY_ZOOM_LEVEL = Float(15)
   
   @IBOutlet weak var debugLabel: UILabel?
   
@@ -96,7 +95,7 @@ class NearMeViewController : RootViewController, GMSMapViewDelegate {
   private func zoomToCoordinate(coordinate: CLLocationCoordinate2D) {
     let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude,
                                           longitude: coordinate.longitude,
-                                          zoom: self.CITY_ZOOM_LEVEL)
+                                          zoom: GOOGLE_ZOOM_LEVEL)
     self.mapView.camera = camera
   }
   

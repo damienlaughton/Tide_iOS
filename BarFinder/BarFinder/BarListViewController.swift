@@ -92,7 +92,7 @@ import UIKit
   
     let bar = self.bar(indexPath: indexPath)
   
-    if let url = URL(string:"comgooglemaps://?center=\(bar.lat),\(bar.lon)&zoom=6&views=traffic") {
+    if let url = URL(string:"comgooglemaps://?center=\(bar.lat),\(bar.lon)&zoom=\(GOOGLE_ZOOM_LEVEL)&views=traffic") {
       if UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
         //If you want handle the completion block than
@@ -100,7 +100,7 @@ import UIKit
           print("Open url : \(success)")
         })
       } else {
-        if let webURL = URL(string:"https://www.google.com/maps/preview/@\(bar.lat),\(bar.lon),6z") {
+        if let webURL = URL(string:"https://www.google.com/maps/preview/@\(bar.lat),\(bar.lon),\(GOOGLE_ZOOM_LEVEL)z") {
         
           if UIApplication.shared.canOpenURL(webURL) {
             UIApplication.shared.open(webURL, options: [:], completionHandler: nil)
